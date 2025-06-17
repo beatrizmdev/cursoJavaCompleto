@@ -1,6 +1,7 @@
 package entradaDeDados;
 import java.util.Scanner;
 
+
 public class Main {
 	public static void main(String[] args) {
 		// Lendo uma palavra
@@ -53,7 +54,7 @@ public class Main {
 		*/
 		
 		// Lendo vários dados na mesma linha
-		
+		/*
 		Scanner entrada = new Scanner(System.in); // aqui estamos associando o nosso objeto Scanner ao teclado no modo console
 		
 		String x;
@@ -70,5 +71,43 @@ public class Main {
 		System.out.println("z: " + z); 
 		
 		entrada.close(); 
+		*/
+		
+		// lendo texto até a quebra de linha (lê uma linha inteira)
+		/*
+		Scanner entrada = new Scanner(System.in);
+		String s1, s2, s3;
+		
+		s1 = entrada.nextLine(); // adicionamos o "Line"
+		s2 = entrada.nextLine();
+		s3 = entrada.nextLine();
+		
+		System.out.println("DADOS DIGITADOS:");
+		System.out.println(s1);
+		System.out.println(s2);
+		System.out.println(s3);
+		
+		entrada.close();
+		*/		
+		
+		// ATENÇÃO! Quebra de linha pendente
+		
+		Scanner entrada = new Scanner(System.in);
+		String s1, s2, s3;
+		int x; 
+		
+		x = entrada.nextInt(); // qualquer outra, sendo diferente de nextLine, vai dar esse problema
+		entrada.nextLine(); // essa fica de step pra consumir o "enter" sem estragar o fluxo desejado
+		s1 = entrada.nextLine(); // adicionamos o "Line"
+		s2 = entrada.nextLine();
+		s3 = entrada.nextLine();
+		
+		System.out.println("DADOS DIGITADOS:");
+		System.out.println(x);
+		System.out.println(s1);
+		System.out.println(s2);
+		System.out.println(s3);
+		
+		entrada.close();
 	}
 }
