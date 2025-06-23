@@ -1,4 +1,4 @@
-package exercicioH;
+package exercicio2H;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -10,6 +10,26 @@ public class Main {
 		double salario = entrada.nextDouble();
 		double imposto = 0.00;
 
+		if (salario > 4500.00) {
+			imposto += (salario - 4500.00) * 0.28;
+			salario = 4500.00;
+		}
+
+		if (salario > 3000) {
+			imposto += (salario - 3000.00) * 0.18;
+			salario = 3000.00;
+		}
+
+		if (salario > 2000.00) {
+			imposto += (salario - 2000.00) * 0.08;
+			salario = 2000.00;			
+		}
+
+		if (salario <= 200.00) {
+			imposto += 0.00;
+		}
+		
+/*
 		double p1, p2, p3, p4;
 		p1 = p2 = p3 = p4 = 0.00;
 		
@@ -36,7 +56,7 @@ public class Main {
 		}
 		
 		imposto = (p1 * 0.00 + p2 * 0.08) + (p3 * 0.18) + (p4 * 0.28);
-		
+*/		
 		if (imposto == 0.00) {
 			System.out.println("Isento");
 		} else {
