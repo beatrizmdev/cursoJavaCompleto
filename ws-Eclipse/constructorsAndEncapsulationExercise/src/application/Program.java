@@ -14,10 +14,13 @@ public class Program {
 		
 		Register register;
 		System.out.print("Enter account number: ");
+		
 		int accountNumber = sc.nextInt();
 		sc.nextLine();
+		
 		System.out.print("Enter account holder: ");
 		String holder = sc.nextLine();
+		
 		char confirmID;
 				
 		System.out.print("Is there a initial deposit (y/n)? ");
@@ -26,6 +29,7 @@ public class Program {
 		if (confirmID == 'y') {
 			System.out.print("Enter initial deposit value: ");
 			double initialDeposit = sc.nextDouble();
+			
 			register = new Register(accountNumber, holder, initialDeposit);
 		}
 		else {
@@ -40,6 +44,7 @@ public class Program {
 		System.out.print("Enter a deposit value: ");
 		double aux = sc.nextDouble();
 		register.deposit(aux);
+		
 		System.out.println("Updated account data:");
 		System.out.println(register);	
 		
@@ -47,6 +52,7 @@ public class Program {
 		System.out.print("Enter a withdraw value: ");
 		aux = sc.nextDouble();
 		register.withdraw(aux);
+		
 		System.out.println("Updated account data:");
 		System.out.println(register);
 
