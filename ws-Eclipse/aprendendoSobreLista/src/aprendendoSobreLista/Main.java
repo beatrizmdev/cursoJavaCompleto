@@ -81,7 +81,7 @@ public class Main {
 		System.out.println("-----------------------------");
 		
 		// Como encontrar um primeiro elemento que comece com um predicado específico
-			// a função findDirst também só está disponível a partir do JAVA 8
+			// a função findFirst também só está disponível a partir do JAVA 8
 			// essa função retorna um tipo optional string, também do JAVA 8
 			// a função orElse(null) diz que se ele não encontrar uma String que comece com 'A', ele deve retornar um valor null
 		String name = list.stream().filter(x -> x.charAt(0) == 'A').findFirst().orElse(null);
