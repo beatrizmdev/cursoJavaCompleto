@@ -45,5 +45,4 @@ public class HourContract {
 		return valuePerHour*hours;
 	}	
 	
-	
 }
