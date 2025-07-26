@@ -5,7 +5,7 @@ public class Product {
 	public double price;
 	public int quantity;
 	
-	// o construtor vem após as declarações de var e comumente leva o nome da classe emq ue está inserido
+	// o construtor vem após as declarações de var e comumente leva o nome da classe em que está inserido
 	public Product(String name, double price, int quantity) {          
 		this.name = name;
 		this.price = price;
