@@ -22,7 +22,7 @@ public class Main {
 		} else {
 			System.out.println("Fora de intervalo");
 		}
-		
+				
 		entrada.close();
 	}
 }
