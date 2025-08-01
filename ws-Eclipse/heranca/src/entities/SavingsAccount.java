@@ -1,9 +1,9 @@
 package entities;
 
-// public class SavingsAccount extends Account{
+public class SavingsAccount extends Account{
 
 // a palavra "final" em classes, evita que essa classe seja herdada por outra (proíbe que tenha subclasses)
-public final class SavingsAccount extends Account{
+// public final class SavingsAccount extends Account{
 
 	private Double interestRate;
 	
@@ -29,7 +29,7 @@ public final class SavingsAccount extends Account{
 	}
 	
 	@Override
-	public void withdraw(double amount) { // reaproveitando o método mas retirando coisa dele / mudando ele
+	public final void withdraw(double amount) { // reaproveitando o método mas retirando coisa dele / mudando ele
 		balance -= amount;
 	}	
 }
