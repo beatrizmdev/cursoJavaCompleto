@@ -12,15 +12,15 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner(System.in);
 		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
 	
 		System.out.print("Enter the number os employees: ");
 		int quant = sc.nextInt();
+		
 		List<Employees> employees = new ArrayList<>();
 		
 		for(int i=1; i<=quant; i++) {
-			Locale.setDefault(Locale.US);
 			sc.nextLine();
 			System.out.println("Employee #" + i + " data:");
 			System.out.print("Outsourced (y/n)? ");

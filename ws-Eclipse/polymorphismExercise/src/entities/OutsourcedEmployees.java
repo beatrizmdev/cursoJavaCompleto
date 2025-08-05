@@ -5,6 +5,7 @@ public class OutsourcedEmployees extends Employees {
 	private Double additionalCharge;
 	
 	public OutsourcedEmployees() {
+		super();
 	}
 	public OutsourcedEmployees(String name, Integer hours, Double valuePerHour, Double additionalCharge) {
 		super(name, hours, valuePerHour);
