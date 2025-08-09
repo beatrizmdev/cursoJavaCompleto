@@ -1,13 +1,16 @@
 package conversaoLocalDateTime;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.Date;
 
 public class Main {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		
 		LocalDate d04 = LocalDate.parse("2025-07-18");
 		LocalDateTime d05 = LocalDateTime.parse("2025-07-18T01:30:26");
@@ -42,6 +45,16 @@ public class Main {
 		
 		System.out.println("d05 hora = " + d05.getHour());
 		System.out.println("d05 minuto = " + d05.getMinute());
+		
+		System.out.println("---------------------------------------------");
+		SimpleDateFormat f1 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		Date agora = new Date();
+		String currentDateStr = f1.format(agora);
+		
+		
+		System.out.println(agora);
+		System.out.println(currentDateStr);
+		System.out.println(f1.format(f1.parse(currentDateStr)));
 
 
 	}
