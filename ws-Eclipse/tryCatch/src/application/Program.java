@@ -7,21 +7,23 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner(System.in);
-		/*
-		 * String[] vect = sc.nextLine().split(" ");
-		 * int position = sc.nextInt();
-		 *
-		 * System.out.println(vect[position]);
-		 */
+		method1();
+		 
+		System.out.println("End of program.");
 		
-		/*
-		 * Possíveis erros aqui:
-		 * 1º ArrayIndexOutOfBoundsException: se o position estiver fora do escolpo do vetor
-		 * 2º InputMismatchException: se no momento de inserir o valor de position, a pessoa digitar uma letra, ou palavra, ou double, etc.
-		 * 
-		 * Para resolver, usaremos a estrutura try catch
-		 */
+		
+	}
+	
+	public static void method1() {
+		System.out.println("***METHOD1 START***");
+		method2();
+		System.out.println("***METHOD1 END***");
+	}
+	
+	public static void method2() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("***METHOD2 START***");
 		
 		try {
 			String[] vect = sc.nextLine().split(" ");
@@ -31,12 +33,17 @@ public class Program {
 		}
 		catch (ArrayIndexOutOfBoundsException error) {
 			System.out.println("Invalid position!");
+			
+			// O stackTrace te mostra toda a chamada de métodos que acarretou naquele erro
+			// ATENÇÃO: mesmo mostrando o que causou o erro, ele segue com o programa graças à estrutura try catch
+			error.printStackTrace(); 
+			sc.next();
 		}
 		catch (InputMismatchException error) {
 			System.out.println("Input error");
 		}
-		 
-		System.out.println("End of program.");
+		
+		System.out.println("***METHOD2 END***");
 		
 		sc.close();
 	}
