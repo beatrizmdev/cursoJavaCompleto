@@ -45,8 +45,12 @@ public class Program {
 		catch (ParseException error) {
 			System.out.println("Invalid date format");
 		}
+		// sem esse bloco, agora (runtime exception) o programa quebra qnd dá Domain Exception
 		catch(DomainException error) {
 			System.out.println("Error in reservation: " + error.getMessage());
+		}
+		catch (RuntimeException error) {
+			System.out.println("Unexpected error");
 		}
 		
 		sc.close();
