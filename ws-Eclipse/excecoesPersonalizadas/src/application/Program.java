@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 import model.entities.Reservation;
+import model.exceptions.DomainException;
 
 public class Program {
 
@@ -44,7 +45,7 @@ public class Program {
 		catch (ParseException error) {
 			System.out.println("Invalid date format");
 		}
-		catch(IllegalArgumentException error) {
+		catch(DomainException error) {
 			System.out.println("Error in reservation: " + error.getMessage());
 		}
 		
