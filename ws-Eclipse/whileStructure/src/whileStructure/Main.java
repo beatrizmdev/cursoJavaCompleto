@@ -8,12 +8,14 @@ public class Main {
 		
 		Scanner entrada = new Scanner(System.in);
 		int num = entrada.nextInt();
+		int soma = num;
 		
 		while (num != 0) {
 			num = entrada.nextInt();
+			soma += num;
 		}
 		
-		System.out.println("Finalizado");
+		System.out.printf("Finalizado, soma: %d", soma);
 		
 		entrada.close();
 	}
