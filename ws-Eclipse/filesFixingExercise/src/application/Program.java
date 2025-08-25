@@ -28,6 +28,8 @@ public class Program {
 		File srcFile = new File(srcFileStr);
 		String srcFolderStr = srcFile.getParent();
 		
+		System.out.println("Testing...");
+		
 		Boolean success = new File(srcFolderStr + "\\out").mkdir();
 		
 		String targetFileStr = srcFolderStr + "\\out\\summary.csv";
