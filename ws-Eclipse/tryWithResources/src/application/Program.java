@@ -13,8 +13,6 @@ public class Program {
 		
 		String path = "C:\\Users\\abbm9\\OneDrive\\Documentos\\temp\\in.txt";
 		
-		// implementação básica padrão super manual
-
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 			
 			String line = br.readLine();
