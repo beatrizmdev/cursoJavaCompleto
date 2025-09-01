@@ -17,7 +17,6 @@ public class Main {
 				System.out.println("Divisão impossível!");
 			} else {
 				double divisao = (double) num1/num2;
-				System.out.printf("%.2f%n", divisao);				
 			}
 		}
 		
