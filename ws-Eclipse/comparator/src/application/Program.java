@@ -16,13 +16,22 @@ public class Program {
 		list.add(new Product("Notebook", 1200.00));
 		list.add(new Product("Tablet", 450.00));
 		
-		Comparator<Product> comp = new Comparator<Product>() { // vamos implementar uma classe anônima
-			@Override
-			public int compare(Product p1, Product p2) {
-				return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
-			} 
+		// função anônima ou arrow function:
+		// (parâmetros) -> { implementação da função }
+		// nos parâmetros não precisa informar o tipo
+		
+		
+		Comparator<Product> comp = (p1, p2) -> { // faremos uma implementação de expressão lambda, criando uma função anônima
+			return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
 		};
 		
+		/*
+		 * OBS: como a implementação tem apenas uma linha, posso também dispensar o "return" e as chaves, deixando dessa forma:
+		 * 
+		 * Comparator<Product> comp = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
+		 * 
+		 */
+
 		list.sort(comp);
 		
 		for (Product p : list) {
