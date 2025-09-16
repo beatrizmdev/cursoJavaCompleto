@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Locale;
 
 import entities.Product;
-import util.PriceUpdate;
 
 public class Program {
 
@@ -19,9 +18,8 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		// forEach é um default method percorre uma lista e executa um consumer em cada item da coleção.
-		// Ele recebe como parâmetro um consumer
-		list.forEach(new PriceUpdate());
+		// reference method com método estático
+		list.forEach(Product::staticPriceUpdate);
 		
 		list.forEach(System.out::println);
 	}
