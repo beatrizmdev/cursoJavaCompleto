@@ -21,10 +21,8 @@ public class Program {
 		
 		double factor = 1.1;
 		
-		// expressão lambda declarada
-		Consumer<Product> cons = p -> p.setPrice(p.getPrice()*factor);
-		
-		list.forEach(cons);
+		// expressão lambda inline		
+		list.forEach(p -> p.setPrice(p.getPrice()*factor));
 		
 		list.forEach(System.out::println);
 	}
