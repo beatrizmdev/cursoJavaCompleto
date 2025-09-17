@@ -29,10 +29,8 @@ public class Program {
 		   List -> stream: .stream()
 		   stream -> List: .ccollect(Collectors.toList())
 		*/
-		
-		Function<Product, String> func = p -> p.getName().toUpperCase();
-		
-		List<String> name = list.stream().map(func).collect(Collectors.toList());
+				
+		List<String> name = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
 		/*
 		 * list.stream() obtem uma stream a partir dessa lista
 		 * list.stream().map(new UpperCaseName()) aplica a função UpperCaseName a todos os elementos de list.stream() devolvendo uma stream com os elementos transformados
