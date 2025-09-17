@@ -29,13 +29,14 @@ public class Program {
 		   stream -> List: .ccollect(Collectors.toList())
 		*/
 		
-		List<String> name = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
+		List<String> name = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
 		/*
 		 * list.stream() obtem uma stream a partir dessa lista
 		 * list.stream().map(new UpperCaseName()) aplica a função UpperCaseName a todos os elementos de list.stream() devolvendo uma stream com os elementos transformados
 		 * list.stream().map(new UpperCaseName()).collect(Collectors.toList()) converte essa nova stream pra lista novamente
 		 */
 		
+		name.forEach(System.out::println);
 	}
 
 }
